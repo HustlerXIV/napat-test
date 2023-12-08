@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import InfoCard from "../../components/InfoCard";
 import athletes from "./athletes.json";
 import useWindowWidth from "../../hooks/useWindowWidth";
+import BgEffect from "../../components/BgEffects/BgEffect";
 
 const ONE = "01";
 const FIFTY = 0.5;
@@ -18,7 +19,10 @@ const AthletesModule = () => {
 
   return (
     <AthletesContainer>
-      <OverlapImage src={IMAGE} width={imageSize} />
+      <OverlapImageContainer>
+        <OverlapImage src={IMAGE} width={imageSize} />
+        <BgEffect effects={athletes.effects} />
+      </OverlapImageContainer>
       {athletes.steps.map(
         ({ number, title, desc, background, underlineColor, descColor }) => (
           <InfoCard
@@ -41,15 +45,21 @@ const AthletesModule = () => {
   );
 };
 
-const OverlapImage = styled.img`
+const OverlapImageContainer = styled.div`
   width: ${({ width }) => `${width}px`};
-  max-width: 678px;
   position: absolute;
   right: 55%;
 `;
 
+const OverlapImage = styled.img`
+  position: relative;
+  max-width: 678px;
+  z-index: 10;
+`;
+
 const AthletesContainer = styled.div`
   position: relative;
+  padding-top: 60px;
 `;
 
 export default AthletesModule;

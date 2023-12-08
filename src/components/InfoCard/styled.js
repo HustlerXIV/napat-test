@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { TABLET_SCREEN } from "../../constant";
 
 export const MainContainer = styled.div`
   width: 100vw;
@@ -20,13 +21,32 @@ export const MainContainer = styled.div`
   }
 `;
 
+export const MainTopic = styled.div`
+  font-size: 5.625rem;
+  line-height: 105.47px;
+  color: var(--light-gray);
+  width: ${({ width }) => `${width}px`};
+  max-width: 700px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @media screen and (max-width: var(--table)) {
+    max-width: 450px;
+  }
+`;
+
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: ${({ width }) => `${width}px`};
   max-width: 700px;
-  padding-right: 40px;
+  word-wrap: break-word;
+
+  @media screen and (max-width: ${TABLET_SCREEN}) {
+    max-width: 450px;
+  }
 `;
 
 export const TopicContainer = styled.div`
@@ -61,13 +81,8 @@ export const Description = styled.div`
   font-size: 20px;
   color: ${(props) => `var(--${props.color})`};
   line-height: 28px;
-`;
 
-export const MainTopic = styled.div`
-  font-size: 90px;
-  color: var(--light-gray);
-  width: ${({ width }) => `${width}px`};
-  max-width: 700px;
-  margin-bottom: 60px;
-  padding-right: 40px;
+  @media screen and (max-width: ${TABLET_SCREEN}) {
+    font-size: 18px;
+  }
 `;
