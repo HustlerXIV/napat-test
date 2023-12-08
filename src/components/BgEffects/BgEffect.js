@@ -2,18 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { MOBILE_SCREEN, TABLET_SCREEN } from "../../constant";
 
-const BgEffect = ({ effects }) => {
+const BgEffect = ({ effects, hideOnDesktop }) => {
   return (
     <div>
       {effects.map((effect) => (
-        <Effect key={effect.path} src={`images/${effect.path}`} {...effect} />
+        <Effect
+          key={effect.path}
+          src={`images/${effect.path}`}
+          hideOnDesktop={hideOnDesktop}
+          {...effect}
+        />
       ))}
     </div>
   );
 };
 
 const Effect = styled.img`
-  display: none;
+  display: ${(props) => props.hideOnDesktop && "none"};
 
   @media screen and (max-width: ${TABLET_SCREEN}) {
     display: block;

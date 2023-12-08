@@ -21,7 +21,7 @@ const AthletesModule = () => {
     <AthletesContainer>
       <OverlapImageContainer>
         <OverlapImage src={IMAGE} width={imageSize} />
-        <BgEffect effects={athletes.effects} />
+        <BgEffect effects={athletes.effects} hideOnDesktop />
       </OverlapImageContainer>
       {athletes.steps.map(
         ({ number, title, desc, background, underlineColor, descColor }) => (
