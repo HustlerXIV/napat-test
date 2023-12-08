@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 import { MOBILE_SCREEN, TABLET_SCREEN } from "../../constant";
 
 const BgEffect = ({ effects, hideOnDesktop }) => {
@@ -9,6 +10,7 @@ const BgEffect = ({ effects, hideOnDesktop }) => {
         <Effect
           key={effect.path}
           src={`images/${effect.path}`}
+          alt={effect.path}
           hideOnDesktop={hideOnDesktop}
           {...effect}
         />
