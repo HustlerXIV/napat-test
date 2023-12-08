@@ -8,6 +8,7 @@ import useWindowWidth from "../../hooks/useWindowWidth";
 const ONE = "01";
 const FIFTY = 0.5;
 const ALIGN_INFO_CARD = "flex-end";
+const FLEX_DIRECTION = "column";
 const IMAGE = "images/athlete.png";
 
 const AthletesModule = () => {
@@ -32,6 +33,7 @@ const AthletesModule = () => {
             underlineColor={underlineColor}
             descColor={descColor}
             alignItems={ALIGN_INFO_CARD}
+            flexDirection={FLEX_DIRECTION}
           />
         )
       )}

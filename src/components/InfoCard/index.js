@@ -12,11 +12,12 @@ const InfoCard = ({
   underlineColor,
   descColor,
   alignItems,
+  flexDirection,
   cardWidth,
 }) => {
   return (
     <styles.MainContainer background={background}>
-      <GlobalContainer alignItems={alignItems} direction="column">
+      <GlobalContainer alignItems={alignItems} flexDirection={flexDirection}>
         {mainTopic && (
           <styles.MainTopic width={cardWidth}>{mainTopic}</styles.MainTopic>
         )}
