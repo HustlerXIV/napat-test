@@ -1,10 +1,10 @@
 import "./App.css";
-import HomeModule from "./modules/Home/HomeModule";
+import AthletesModule from "./modules/Home/AthletesModule";
 
 function App() {
   return (
     <>
-      <HomeModule />
+      <AthletesModule />
     </>
   );
 }

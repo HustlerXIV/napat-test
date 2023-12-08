@@ -2,18 +2,31 @@ import { styled } from "styled-components";
 
 export const MainContainer = styled.div`
   width: 100vw;
-  padding: 64px 0px;
-  background: ${(props) => `var(--${props.background})`};
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 64px 0px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: ${(props) => `var(--${props.background})`};
+    z-index: -1;
+  }
 `;
+
 export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
+  width: ${({ width }) => `${width}px`};
   max-width: 700px;
+  padding-right: 40px;
 `;
 
 export const TopicContainer = styled.div`
@@ -48,4 +61,13 @@ export const Description = styled.div`
   font-size: 20px;
   color: ${(props) => `var(--${props.color})`};
   line-height: 28px;
+`;
+
+export const MainTopic = styled.div`
+  font-size: 90px;
+  color: var(--light-gray);
+  width: ${({ width }) => `${width}px`};
+  max-width: 700px;
+  margin-bottom: 60px;
+  padding-right: 40px;
 `;
