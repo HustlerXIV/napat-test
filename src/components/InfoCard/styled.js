@@ -83,6 +83,11 @@ export const NumberContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${({ numberColor }) => `var(--${numberColor})`};
+
+  @media screen and (max-width: ${MOBILE_SCREEN}) {
+    padding-top: 2px;
+    justify-content: center;
+  }
 `;
 
 export const Underline = styled.div`

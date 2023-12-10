@@ -36,7 +36,15 @@ const Swiper = ({ items, topic, alignItems, flexDirection, displayTopic }) => {
   return (
     <Slider {...settings}>
       {items.map(
-        ({ number, title, desc, background, underlineColor, descColor }) => (
+        ({
+          number,
+          title,
+          desc,
+          background,
+          underlineColor,
+          descColor,
+          numberColor,
+        }) => (
           <InfoCard
             key={number}
             displayTopic={displayTopic}
@@ -49,6 +57,7 @@ const Swiper = ({ items, topic, alignItems, flexDirection, displayTopic }) => {
             descColor={descColor}
             alignItems={alignItems}
             flexDirection={flexDirection}
+            numberColor={numberColor}
           />
         )
       )}
