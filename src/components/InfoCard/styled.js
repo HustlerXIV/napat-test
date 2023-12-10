@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { TABLET_SCREEN } from "../../constant";
+import { MOBILE_SCREEN, TABLET_SCREEN } from "../../constant";
 
 export const MainContainer = styled.div`
   width: 100vw;
@@ -23,6 +23,10 @@ export const MainContainer = styled.div`
   @media screen and (max-width: ${TABLET_SCREEN}) {
     padding: 32px 0px;
   }
+
+  @media screen and (max-width: ${MOBILE_SCREEN}) {
+    height: 300px;
+  }
 `;
 
 export const MainTopic = styled.div`
@@ -38,6 +42,10 @@ export const MainTopic = styled.div`
   @media screen and (max-width: ${TABLET_SCREEN}) {
     max-width: 450px;
   }
+
+  @media screen and (max-width: ${MOBILE_SCREEN}) {
+    width: 100%;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -50,6 +58,10 @@ export const InfoContainer = styled.div`
 
   @media screen and (max-width: ${TABLET_SCREEN}) {
     max-width: 450px;
+  }
+
+  @media screen and (max-width: ${MOBILE_SCREEN}) {
+    width: 100%;
   }
 `;
 
@@ -79,6 +91,10 @@ export const Underline = styled.div`
 export const Title = styled.div`
   color: var(--approx-silver);
   font-size: 36px;
+
+  @media screen and (max-width: ${MOBILE_SCREEN}) {
+    font-size: 28px;
+  }
 `;
 
 export const Description = styled.div`
