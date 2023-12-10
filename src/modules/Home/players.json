@@ -36,7 +36,7 @@
       "right": null,
       "mobileTop": "5%",
       "mobileLeft": "10%",
-      "mobileRIght": null
+      "mobileRight": null
     },
     {
       "path": "plus-opacity.png",
@@ -45,19 +45,25 @@
       "right": null,
       "mobileTop": "0",
       "mobileLeft": "0",
-      "mobileRIght": null
+      "mobileRight": null
     },
     {
       "path": "line.png",
       "top": "10%",
       "left": null,
-      "right": "5%"
+      "right": "5%",
+      "mobileTop": "0",
+      "mobileLeft": null,
+      "mobileRight": "0"
     },
     {
       "path": "line.png",
       "top": "50%",
       "left": "25%",
-      "right": null
+      "right": null,
+      "mobileTop": "50%",
+      "mobileLeft": "20%",
+      "mobileRight": null
     },
     {
       "path": "plus.png",
@@ -65,7 +71,7 @@
       "right": "22%",
       "mobileTop": "5%",
       "mobileLeft": "10%",
-      "mobileRIght": null
+      "mobileRight": null
     }
   ]
 }

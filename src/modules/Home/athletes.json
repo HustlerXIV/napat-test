@@ -51,6 +51,15 @@
       "top": "5%",
       "left": null,
       "right": "10%"
+    },
+    {
+      "path": "line.png",
+      "top": "5%",
+      "left": null,
+      "right": "10%",
+      "mobileTop": "50%",
+      "mobileLeft": "0",
+      "mobileRIght": null
     }
   ]
 }
