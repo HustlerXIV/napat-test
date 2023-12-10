@@ -19,6 +19,10 @@ export const MainContainer = styled.div`
     background-color: ${(props) => `var(--${props.background})`};
     z-index: -1;
   }
+
+  @media screen and (max-width: ${TABLET_SCREEN}) {
+    padding: 32px 0px;
+  }
 `;
 
 export const MainTopic = styled.div`
@@ -31,7 +35,7 @@ export const MainTopic = styled.div`
   overflow: hidden;
   white-space: nowrap;
 
-  @media screen and (max-width: var(--table)) {
+  @media screen and (max-width: ${TABLET_SCREEN}) {
     max-width: 450px;
   }
 `;

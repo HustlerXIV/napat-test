@@ -1,10 +1,10 @@
 {
-  "mainTopic": "ATHLETS",
+  "mainTopic": "PLAYERS",
   "steps": [
     {
       "number": "01",
       "title": "CONNECTION",
-      "desc": "Connect with coaches directly, you can ping coaches to view profile.",
+      "desc": "Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.",
       "background": "white",
       "underlineColor": "purple",
       "descColor": ""
@@ -12,7 +12,7 @@
     {
       "number": "02",
       "title": "COLLABORATION",
-      "desc": "Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.",
+      "desc": "Work with recruiter to increase your chances of finding talented athlete.",
       "background": "ghost-white",
       "underlineColor": "purple",
       "descColor": ""
@@ -20,8 +20,8 @@
     {
       "number": "03",
       "title": "GROWTH",
-      "desc": "Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc",
-      "background": "purple",
+      "desc": "Save your time, recruit proper athlets for your team.",
+      "background": "mainly-blue",
       "underlineColor": "white",
       "descColor": "white"
     }
@@ -29,14 +29,14 @@
   "effects": [
     {
       "path": "plus.png",
-      "top": "0",
-      "left": "45%",
+      "top": "1%",
+      "left": "30%",
       "right": null
     },
     {
       "path": "plus-opacity.png",
-      "top": "-20px",
-      "left": "40%",
+      "top": "-2%",
+      "left": "25%",
       "right": null
     },
     {

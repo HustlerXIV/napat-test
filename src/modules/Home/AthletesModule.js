@@ -5,6 +5,7 @@ import InfoCard from "../../components/InfoCard";
 import athletes from "./athletes.json";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import BgEffect from "../../components/BgEffects/BgEffect";
+import { TABLET_SCREEN } from "../../constant";
 
 const ONE = "01";
 const FIFTY = 0.5;
@@ -14,20 +15,18 @@ const IMAGE = "images/athlete.png";
 
 const AthletesModule = () => {
   const screenWidth = useWindowWidth();
-  const imageSize = Math.floor(screenWidth * FIFTY);
   const cardSize = Math.floor(screenWidth * FIFTY);
 
   return (
     <AthletesContainer>
       <OverlapImageContainer>
-        <OverlapImage src={IMAGE} width={imageSize} />
+        <OverlapImage src={IMAGE} />
         <BgEffect effects={athletes.effects} hideOnDesktop />
       </OverlapImageContainer>
       {athletes.steps.map(
         ({ number, title, desc, background, underlineColor, descColor }) => (
           <InfoCard
             cardWidth={cardSize}
-            imageWidth={imageSize}
             key={number}
             mainTopic={number === ONE && athletes.mainTopic}
             number={number}
@@ -46,15 +45,22 @@ const AthletesModule = () => {
 };
 
 const OverlapImageContainer = styled.div`
-  width: ${({ width }) => `${width}px`};
   position: absolute;
   right: 55%;
+
+  @media screen and (max-width: ${TABLET_SCREEN}) {
+    top: 15%;
+    right: 50%;
+  }
 `;
 
 const OverlapImage = styled.img`
   position: relative;
-  max-width: 678px;
   z-index: 10;
+
+  @media screen and (max-width: ${TABLET_SCREEN}) {
+    width: 510px;
+  }
 `;
 
 const AthletesContainer = styled.div`
