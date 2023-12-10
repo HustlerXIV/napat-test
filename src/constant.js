@@ -6,3 +6,4 @@ export const FIFTY = 0.5;
 export const FLEX_START = "flex-start";
 export const FLEX_END = "flex-end";
 export const COLUMN = "column";
+export const MOBILE_SCREEN_WIDTH = 750;

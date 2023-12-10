@@ -3,7 +3,14 @@ import React from "react";
 import * as styles from "./styled";
 import BgEffect from "../../components/BgEffects/BgEffect";
 import players from "./players.json";
-import { FIFTY, FLEX_END, COLUMN, ONE, FLEX_START } from "../../constant";
+import {
+  FIFTY,
+  FLEX_END,
+  COLUMN,
+  ONE,
+  FLEX_START,
+  MOBILE_SCREEN_WIDTH,
+} from "../../constant";
 import useWindowWidth from "../../hooks/useWindowWidth";
 import GlobalContainer from "../../components/GlobalContainer";
 import Swiper from "../../components/Swiper";
@@ -11,8 +18,10 @@ import InfoCard from "../../components/InfoCard";
 
 const PlayersModule = () => {
   const screenWidth = useWindowWidth();
-  const isMobile = screenWidth <= 750;
+  const isMobile = screenWidth <= MOBILE_SCREEN_WIDTH;
   const width = Math.floor(screenWidth * FIFTY);
+
+  const { mainTopic, image, effects, steps } = players;
 
   return (
     <styles.SectionContainer style={{ overflow: "hidden" }}>
@@ -22,21 +31,17 @@ const PlayersModule = () => {
           flexDirection={COLUMN}
           hidePadding
         >
-          <styles.MainTopic>{players.mainTopic}</styles.MainTopic>
+          <styles.MainTopic>{mainTopic}</styles.MainTopic>
         </GlobalContainer>
       )}
       <styles.PlayerOverlapImageContainer>
-        <styles.OverlapImage src={players.image} mobileWidth={300} />
-        <BgEffect effects={players.effects} widthEffect={width} />
+        <styles.OverlapImage src={image} mobileWidth={300} />
+        <BgEffect effects={effects} widthEffect={width} />
       </styles.PlayerOverlapImageContainer>
       {isMobile ? (
-        <Swiper
-          topic={players.mainTopic}
-          items={players.steps}
-          displayTopic={false}
-        />
+        <Swiper topic={mainTopic} items={steps} displayTopic={false} />
       ) : (
-        players.steps.map(
+        steps.map(
           ({
             number,
             title,
