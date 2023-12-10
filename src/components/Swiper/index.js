@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import InfoCard from "../InfoCard";
 
-const Swiper = ({ items, topic, cardSize, alignItems, flexDirection }) => {
+const Swiper = ({
+  items,
+  topic,
+  cardSize,
+  alignItems,
+  flexDirection,
+  displayTopic,
+}) => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -10,6 +19,25 @@ const Swiper = ({ items, topic, cardSize, alignItems, flexDirection }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    afterChange: (current) => setActiveSlide(current),
+    beforeChange: (current, next) => setActiveSlide(current),
+    appendDots: (dots) => (
+      <div
+        style={{
+          position: "absolute",
+          bottom: "10px",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        {dots}
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        className={`custom-dots ${i === activeSlide ? "active-dots" : ""}`}
+      ></div>
+    ),
   };
 
   return (
@@ -19,7 +47,7 @@ const Swiper = ({ items, topic, cardSize, alignItems, flexDirection }) => {
           <InfoCard
             cardWidth={cardSize}
             key={number}
-            displayTopic={topic}
+            displayTopic={displayTopic}
             mainTopic={topic}
             number={number}
             title={title}

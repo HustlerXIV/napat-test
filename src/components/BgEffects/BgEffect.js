@@ -20,20 +20,21 @@ const BgEffect = ({ effects, hideOnDesktop }) => {
 };
 
 const Effect = styled.img`
-  display: ${(props) => props.hideOnDesktop && "none"};
+  display: ${({ hideOnDesktop }) => hideOnDesktop && "none"};
+  position: absolute;
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
+  right: ${({ right }) => right};
 
   @media screen and (max-width: ${TABLET_SCREEN}) {
     display: block;
-    position: absolute;
-    top: ${(props) => props.top};
-    left: ${(props) => props.left};
-    right: ${(props) => props.right};
   }
 
   @media screen and (max-width: ${MOBILE_SCREEN}) {
-    top: ${(props) => props.mobileTop};
-    left: ${(props) => props.mobileLeft};
-    right: ${(props) => props.mobileRight};
+    top: ${({ mobileTop }) => mobileTop};
+    left: ${({ mobileLeft }) => mobileLeft};
+    right: ${({ mobileRight }) => mobileRight};
+    max-width: 100px;
   }
 `;
 

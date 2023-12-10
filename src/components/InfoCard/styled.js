@@ -16,7 +16,7 @@ export const MainContainer = styled.div`
     left: 0;
     width: 100vw;
     height: 100%;
-    background-color: ${(props) => `var(--${props.background})`};
+    background-color: ${({ background }) => `var(--${background})`};
     z-index: -1;
   }
 
@@ -25,26 +25,29 @@ export const MainContainer = styled.div`
   }
 
   @media screen and (max-width: ${MOBILE_SCREEN}) {
-    height: 300px;
+    height: 280px;
   }
 `;
 
 export const MainTopic = styled.div`
-  font-size: 5.625rem;
+  font-size: 90px;
   line-height: 105.47px;
   color: var(--light-gray);
   width: ${({ width }) => `${width}px`};
   max-width: 700px;
   margin-bottom: 60px;
-  overflow: hidden;
   white-space: nowrap;
 
   @media screen and (max-width: ${TABLET_SCREEN}) {
+    width: auto;
     max-width: 450px;
   }
 
   @media screen and (max-width: ${MOBILE_SCREEN}) {
     width: 100%;
+    font-size: 50px;
+    line-height: 58.59px;
+    margin-bottom: 280px;
   }
 `;
 
@@ -79,13 +82,14 @@ export const NumberContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  color: ${({ numberColor }) => `var(--${numberColor})`};
 `;
 
 export const Underline = styled.div`
   width: 100%;
   height: 5px;
   border-radius: 4px;
-  background: ${(props) => `var(--${props.color})`};
+  background: ${({ color }) => `var(--${color})`};
 `;
 
 export const Title = styled.div`
@@ -99,7 +103,7 @@ export const Title = styled.div`
 
 export const Description = styled.div`
   font-size: 20px;
-  color: ${(props) => `var(--${props.color})`};
+  color: ${({ color }) => `var(--${color})`};
   line-height: 28px;
 
   @media screen and (max-width: ${TABLET_SCREEN}) {

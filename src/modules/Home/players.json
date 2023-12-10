@@ -1,5 +1,6 @@
 {
   "mainTopic": "PLAYERS",
+  "image": "images/basketball.png",
   "steps": [
     {
       "number": "01",
@@ -23,27 +24,48 @@
       "desc": "Save your time, recruit proper athlets for your team.",
       "background": "mainly-blue",
       "underlineColor": "white",
-      "descColor": "white"
+      "descColor": "white",
+      "numberColor": "purple"
     }
   ],
   "effects": [
     {
       "path": "plus.png",
-      "top": "1%",
-      "left": "30%",
-      "right": null
+      "top": "15%",
+      "left": "22%",
+      "right": null,
+      "mobileTop": "5%",
+      "mobileLeft": "10%",
+      "mobileRIght": null
     },
     {
       "path": "plus-opacity.png",
-      "top": "-2%",
+      "top": "18%",
+      "left": "25%",
+      "right": null,
+      "mobileTop": "0",
+      "mobileLeft": "0",
+      "mobileRIght": null
+    },
+    {
+      "path": "line.png",
+      "top": "10%",
+      "left": null,
+      "right": "5%"
+    },
+    {
+      "path": "line.png",
+      "top": "50%",
       "left": "25%",
       "right": null
     },
     {
-      "path": "line.png",
-      "top": "5%",
-      "left": null,
-      "right": "10%"
+      "path": "plus.png",
+      "top": "50%",
+      "right": "22%",
+      "mobileTop": "5%",
+      "mobileLeft": "10%",
+      "mobileRIght": null
     }
   ]
 }

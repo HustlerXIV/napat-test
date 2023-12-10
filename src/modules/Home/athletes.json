@@ -1,5 +1,6 @@
 {
   "mainTopic": "ATHLETS",
+  "image": "images/athlete.png",
   "steps": [
     {
       "number": "01",
@@ -31,13 +32,19 @@
       "path": "plus.png",
       "top": "0",
       "left": "45%",
-      "right": null
+      "right": null,
+      "mobileTop": "5%",
+      "mobileLeft": "10%",
+      "mobileRIght": null
     },
     {
       "path": "plus-opacity.png",
       "top": "-20px",
       "left": "40%",
-      "right": null
+      "right": null,
+      "mobileTop": "0",
+      "mobileLeft": "0",
+      "mobileRIght": null
     },
     {
       "path": "line.png",

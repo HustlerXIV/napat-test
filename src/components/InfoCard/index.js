@@ -15,6 +15,7 @@ const InfoCard = ({
   flexDirection,
   cardWidth,
   displayTopic,
+  numberColor,
 }) => {
   return (
     <styles.MainContainer background={background}>
@@ -24,7 +25,7 @@ const InfoCard = ({
         )}
         <styles.InfoContainer width={cardWidth}>
           <styles.TopicContainer>
-            <styles.NumberContainer>
+            <styles.NumberContainer numberColor={numberColor}>
               {number}
               <styles.Underline color={underlineColor} />
             </styles.NumberContainer>

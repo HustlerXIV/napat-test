@@ -42,3 +42,17 @@ body {
 .slider-with-z-index {
   z-index: 1;
 }
+
+.custom-dots {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #d8d8d8;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active-dots {
+  background: #5c3caf;
+}
