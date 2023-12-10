@@ -19,6 +19,11 @@ const BgEffect = ({ effects, hideOnDesktop }) => {
   );
 };
 
+BgEffect.defaultProps = {
+  effects: [],
+  hideOnDesktop: false,
+};
+
 const Effect = styled.img`
   display: ${({ hideOnDesktop }) => hideOnDesktop && "none"};
   position: absolute;

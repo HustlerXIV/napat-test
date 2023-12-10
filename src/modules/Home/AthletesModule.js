@@ -1,7 +1,7 @@
 import React from "react";
 
 import * as styles from "./styled";
-import BgEffect from "../../components/BgEffects/BgEffect";
+import BgEffect from "../../components/BgEffects";
 import athletes from "./athletes.json";
 import {
   FIFTY,

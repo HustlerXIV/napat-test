@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import InfoCard from "../InfoCard";
 
-const Swiper = ({
-  items,
-  topic,
-  cardSize,
-  alignItems,
-  flexDirection,
-  displayTopic,
-}) => {
+const Swiper = ({ items, topic, alignItems, flexDirection, displayTopic }) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const settings = {
@@ -45,7 +38,6 @@ const Swiper = ({
       {items.map(
         ({ number, title, desc, background, underlineColor, descColor }) => (
           <InfoCard
-            cardWidth={cardSize}
             key={number}
             displayTopic={displayTopic}
             mainTopic={topic}
